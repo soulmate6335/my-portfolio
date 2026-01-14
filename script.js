@@ -63,12 +63,19 @@ function filterProjects(category) {
 
 // Contact Form Submission
 function handleFormSubmit(event) {
-  event.preventDefault();
+  // Formspree will handle the submission automatically
+  // This function can be removed or kept for additional client-side validation
   
   const name = document.getElementById('name').value;
   const email = document.getElementById('email').value;
   const message = document.getElementById('message').value;
   
+  if (!name || !email || !message) {
+    alert('Please fill in all fields');
+    event.preventDefault();
+  }
+}
+
   // Simple validation
   if (name && email && message) {
     // Show success message
@@ -80,7 +87,7 @@ function handleFormSubmit(event) {
     // In a real scenario, you would send this to a server
     // For now, you can use services like Formspree, EmailJS, or Netlify Forms
   }
-}
+
 
 // Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {

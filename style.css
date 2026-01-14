@@ -55,9 +55,23 @@ body {
 }
 
 .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--primary-color);
   font-weight: bold;
   font-size: 1.5rem;
-  color: var(--primary-color);
+  transition: opacity 0.3s ease;
+}
+
+.logo:hover {
+  opacity: 0.8;
+}
+
+.logo-img {
+  height: 40px;
+  width: auto;
 }
 
 .nav-menu {
