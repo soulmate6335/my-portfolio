@@ -11,43 +11,89 @@
 <body>
 
   <nav class="navbar">
-  <ul>
-    <li><a href="#about">About</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-</nav>
-
+    <div class="nav-container">
+      <div class="logo">Tee-Kay Tech</div>
+      <ul class="nav-menu">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><button class="theme-toggle" onclick="toggleTheme()">🌙</button></li>
+      </ul>
+      <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
 
   <header class="hero">
-    <h1>Tee-Kay Tech</h1>
-    <p>Smart solutions for the digital world</p>
-    <a href="#contact" class="cta-button">Get In Touch</a>
+    <div class="hero-content">
+      <h1>Tee-Kay Tech</h1>
+      <p>Smart solutions for the digital world</p>
+      <a href="#contact" class="cta-button">Get In Touch</a>
+    </div>
   </header>
 
   <section class="about" id="about">
-    <h2>About Me</h2>
-    <p>
-      I'm Soulmate, a passionate web developer focused on building clean,
-      functional, and modern digital solutions.
-    </p>
+    <div class="about-content">
+      <div class="about-text">
+        <h2>About Me</h2>
+        <p>
+          I'm Soulmate, a passionate web developer focused on building clean,
+          functional, and modern digital solutions. With expertise in front-end 
+          development, I create responsive websites that deliver excellent user experiences.
+        </p>
+        <p>
+          I'm committed to continuous learning and staying updated with the latest 
+          web development trends and technologies.
+        </p>
+      </div>
+    </div>
   </section>
 
   <section class="skills" id="skills">
     <h2>Skills</h2>
-    <ul>
-      <li>HTML</li>
-      <li>CSS</li>
-      <li>JavaScript</li>
-      <li>Git & GitHub</li>
+    <ul class="skills-grid">
+      <li class="skill-item">
+        <span class="skill-icon">📄</span>
+        <span>HTML</span>
+      </li>
+      <li class="skill-item">
+        <span class="skill-icon">🎨</span>
+        <span>CSS</span>
+      </li>
+      <li class="skill-item">
+        <span class="skill-icon">⚙️</span>
+        <span>JavaScript</span>
+      </li>
+      <li class="skill-item">
+        <span class="skill-icon">🔧</span>
+        <span>Git & GitHub</span>
+      </li>
+      <li class="skill-item">
+        <span class="skill-icon">📱</span>
+        <span>Responsive Design</span>
+      </li>
+      <li class="skill-item">
+        <span class="skill-icon">🚀</span>
+        <span>Web Performance</span>
+      </li>
     </ul>
   </section>
 
   <section class="projects" id="projects">
     <h2>Projects</h2>
+    <div class="filter-buttons">
+      <button class="filter-btn active" onclick="filterProjects('all')">All</button>
+      <button class="filter-btn" onclick="filterProjects('web')">Web</button>
+      <button class="filter-btn" onclick="filterProjects('frontend')">Frontend</button>
+    </div>
     <div class="projects-container">
-      <div class="project-card">
+      <div class="project-card" data-category="web">
+        <div class="project-image-placeholder">Portfolio Website</div>
         <h3>Portfolio Website</h3>
         <p>A responsive personal portfolio showcasing web development skills and projects.</p>
         <p class="tech-stack"><strong>Tech:</strong> HTML, CSS, JavaScript</p>
@@ -57,7 +103,8 @@
         </div>
       </div>
 
-      <div class="project-card">
+      <div class="project-card" data-category="frontend">
+        <div class="project-image-placeholder">Project Two</div>
         <h3>Project Two</h3>
         <p>Description of your second project goes here.</p>
         <p class="tech-stack"><strong>Tech:</strong> HTML, CSS, JavaScript</p>
@@ -67,7 +114,8 @@
         </div>
       </div>
 
-      <div class="project-card">
+      <div class="project-card" data-category="web">
+        <div class="project-image-placeholder">Project Three</div>
         <h3>Project Three</h3>
         <p>Description of your third project goes here.</p>
         <p class="tech-stack"><strong>Tech:</strong> HTML, CSS, JavaScript</p>
@@ -79,16 +127,73 @@
     </div>
   </section>
 
-    <section class="contact" id="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:kehindehussein720@email.com">kehindehussein720@email.com</a></p>
-    <p>Phone: <a href="tel:+2348158558640">+234 8158558640</a></p>
-    <p>GitHub: <a href="https://github.com/soulmate6335" target="_blank">soulmate6335</a></p>
+  <section class="blog" id="blog">
+    <h2>Blog & Articles</h2>
+    <div class="blog-container">
+      <article class="blog-card">
+        <h3>Getting Started with HTML & CSS</h3>
+        <p class="blog-date">January 14, 2026</p>
+        <p>Learn the fundamentals of HTML and CSS to build beautiful, responsive websites. This guide covers semantic HTML, CSS flexbox, and grid layouts.</p>
+        <a href="#" class="read-more">Read More →</a>
+      </article>
+
+      <article class="blog-card">
+        <h3>JavaScript Tips for Beginners</h3>
+        <p class="blog-date">January 10, 2026</p>
+        <p>Essential JavaScript concepts every beginner should know. From variables and functions to DOM manipulation and event listeners.</p>
+        <a href="#" class="read-more">Read More →</a>
+      </article>
+
+      <article class="blog-card">
+        <h3>Web Performance Optimization</h3>
+        <p class="blog-date">January 5, 2026</p>
+        <p>Improve your website's loading speed and user experience with these practical optimization techniques and best practices.</p>
+        <a href="#" class="read-more">Read More →</a>
+      </article>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <h2>Get In Touch</h2>
+    <div class="contact-container">
+      <div class="contact-info">
+        <div class="contact-item">
+          <h3>Email</h3>
+          <a href="mailto:kehindehussein720@email.com">kehindehussein720@email.com</a>
+        </div>
+        <div class="contact-item">
+          <h3>Phone</h3>
+          <a href="tel:+2348158558640">+234 8158558640</a><br>
+          <a href="tel:+2349025111761">+234 9025111761</a>
+        </div>
+        <div class="contact-item">
+          <h3>Social</h3>
+          <a href="https://github.com/soulmate6335" target="_blank">GitHub</a>
+        </div>
+      </div>
+
+      <form class="contact-form" onsubmit="handleFormSubmit(event)">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="submit-btn">Send Message</button>
+      </form>
+    </div>
   </section>
 
   <footer>
-    <p>© 2026 Tee-Kay Tech</p>
+    <p>© 2026 Tee-Kay Tech. All rights reserved.</p>
   </footer>
 
+  <script src="script.js"></script>
 </body>
 </html>
