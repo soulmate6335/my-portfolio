@@ -232,6 +232,19 @@ h2 {
   flex-wrap: wrap;
 }
 
+/* Project Images */
+.project-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover; /* Ensures images fill without distortion */
+  border-radius: 8px 8px 0 0; /* Matches card border-radius */
+  transition: transform 0.3s ease; /* Optional hover effect */
+}
+
+.project-card:hover .project-image {
+  transform: scale(1.05); /* Subtle zoom on hover */
+}
+
 .filter-btn {
   background: var(--bg-card);
   color: var(--primary-color);
