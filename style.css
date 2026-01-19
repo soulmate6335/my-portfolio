@@ -223,6 +223,76 @@ h2 {
   font-size: 2rem;
 }
 
+/* Certifications Section */
+.certifications-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.certification-card {
+  background: var(--bg-card);
+  padding: 25px;
+  border-radius: 8px;
+  border-left: 4px solid var(--primary-color);
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.certification-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 229, 255, 0.2);
+  border-left-color: var(--primary-dark);
+}
+
+.certificate-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+}
+
+.certification-card:hover .certificate-image {
+  transform: scale(1.05);
+}
+
+.certification-card h3 {
+  color: var(--primary-color);
+  margin: 15px 0 10px;
+  font-size: 1.3rem;
+}
+
+.certification-issuer {
+  color: var(--text-secondary);
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.certification-date {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin: 5px 0 15px;
+}
+
+.certification-link {
+  display: inline-block;
+  background: var(--primary-color);
+  color: #000;
+  padding: 8px 16px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.certification-link:hover {
+  background: var(--primary-dark);
+  transform: scale(1.05);
+}
+
 /* Projects Section */
 .filter-buttons {
   display: flex;
@@ -282,17 +352,6 @@ h2 {
   transform: translateY(-12px);
   border-color: var(--primary-color);
   box-shadow: 0 12px 30px rgba(0, 229, 255, 0.2);
-}
-
-.project-image-placeholder {
-  background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
-  height: 200px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #000;
-  font-weight: bold;
-  font-size: 1.2rem;
 }
 
 .project-card h3 {
@@ -544,6 +603,10 @@ footer {
   }
 
   .projects-container {
+    grid-template-columns: 1fr;
+  }
+
+  .certifications-container {
     grid-template-columns: 1fr;
   }
 
