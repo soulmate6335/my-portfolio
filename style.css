@@ -184,6 +184,52 @@ h2 {
   gap: 40px;
 }
 
+.about-image {
+  text-align: center;
+}
+
+.profile-photo {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.about-image h3 {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  margin: 0;
+}
+
+.upload-btn {
+  background: var(--primary-color);
+  color: #000;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  margin-top: 10px;
+  transition: background 0.3s ease;
+}
+
+.upload-btn:hover {
+  background: var(--primary-dark);
+}
+
+.name-input {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  background: var(--bg-card);
+  border: 1px solid var(--primary-color);
+  border-radius: 4px;
+  padding: 5px 10px;
+  text-align: center;
+  font-family: inherit;
+}
+
 .about-text p {
   font-size: 1.1rem;
   color: var(--text-secondary);
@@ -245,7 +291,7 @@ h2 {
   border-left-color: var(--primary-dark);
 }
 
-.certificate-image {
+.certificate-image, .certificate-pdf {
   width: 100%;
   height: 180px;
   object-fit: cover;
@@ -254,7 +300,8 @@ h2 {
   transition: transform 0.3s ease;
 }
 
-.certification-card:hover .certificate-image {
+.certification-card:hover .certificate-image,
+.certification-card:hover .certificate-pdf {
   transform: scale(1.05);
 }
 
@@ -568,6 +615,12 @@ footer {
 }
 
 /* Responsive Design */
+@media (min-width: 769px) {
+  .about-content {
+    grid-template-columns: 1fr 2fr;
+  }
+}
+
 @media (max-width: 768px) {
   .hamburger {
     display: flex;

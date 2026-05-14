@@ -43,6 +43,12 @@
 
   <section class="about" id="about">
     <div class="about-content">
+      <div class="about-image">
+        <img src="https://via.placeholder.com/200x200/00e5ff/000000?text=Your+Photo" alt="Your Photo" class="profile-photo" id="profile-photo">
+        <h3 id="profile-name">Soulmate</h3>
+        <input type="file" id="photo-upload" accept="image/*" style="display: none;">
+        <button onclick="document.getElementById('photo-upload').click()" class="upload-btn">Change Photo</button>
+      </div>
       <div class="about-text">
         <h2>About Me</h2>
         <p>
@@ -51,8 +57,16 @@
           development, I create responsive websites that deliver excellent user experiences.
         </p>
         <p>
+          My skills include proficiency in HTML, CSS, and JavaScript for creating 
+          interactive and responsive web applications. I'm experienced with version 
+          control using Git and GitHub, and I have knowledge of back-end technologies 
+          like PHP and Python. I also work with databases such as MySQL and have 
+          experience in data analysis.
+        </p>
+        <p>
           I'm committed to continuous learning and staying updated with the latest 
-          web development trends and technologies.
+          web development trends and technologies, including web performance optimization 
+          and responsive design principles.
         </p>
       </div>
     </div>
@@ -108,51 +122,179 @@
     <h2>Certifications</h2>
     <div class="certifications-container">
       <div class="certification-card">
-        <img src="images/cert-responsive-web-design.png" alt="Responsive Web Design Certificate" class="certificate-image" loading="lazy">
-        <h3>Responsive Web Design</h3>
-        <p class="certification-issuer">freeCodeCamp</p>
-        <p class="certification-date">January 2024</p>
-        <a href="#" target="_blank" class="certification-link">Verify Certificate</a>
+        <div class="certificate-media" data-src="image/Agile Project Management.pdf" data-type="pdf"></div>
+        <h3>Agile Project Management</h3>
+        <p class="certification-issuer">Various</p>
+        <p class="certification-date">2024</p>
+        <a href="image/Agile Project Management.pdf" target="_blank" class="certification-link">View Certificate</a>
       </div>
 
       <div class="certification-card">
-        <img src="images/cert-javascript-algorithms.png" alt="JavaScript Algorithms Certificate" class="certificate-image" loading="lazy">
-        <h3>JavaScript Algorithms and Data Structures</h3>
-        <p class="certification-issuer">freeCodeCamp</p>
-        <p class="certification-date">February 2024</p>
-        <a href="#" target="_blank" class="certification-link">Verify Certificate</a>
+        <div class="certificate-media" data-src="image/AI for Beginners.pdf" data-type="pdf"></div>
+        <h3>AI for Beginners</h3>
+        <p class="certification-issuer">Various</p>
+        <p class="certification-date">2024</p>
+        <a href="image/AI for Beginners.pdf" target="_blank" class="certification-link">View Certificate</a>
       </div>
 
       <div class="certification-card">
-        <img src="images/cert-frontend-libraries.png" alt="Front-End Development Libraries Certificate" class="certificate-image" loading="lazy">
-        <h3>Front-End Development Libraries</h3>
-        <p class="certification-issuer">Coursera</p>
-        <p class="certification-date">March 2024</p>
-        <a href="#" target="_blank" class="certification-link">Verify Certificate</a>
+        <div class="certificate-media" data-src="image/AI for Business Professionals.pdf" data-type="pdf"></div>
+        <h3>AI for Business Professionals</h3>
+        <p class="certification-issuer">Various</p>
+        <p class="certification-date">2024</p>
+        <a href="image/AI for Business Professionals.pdf" target="_blank" class="certification-link">View Certificate</a>
       </div>
 
       <div class="certification-card">
-        <img src="images/cert-git-github.png" alt="Git & GitHub Certificate" class="certificate-image" loading="lazy">
-        <h3>Git & GitHub Complete Guide</h3>
-        <p class="certification-issuer">Udemy</p>
-        <p class="certification-date">April 2024</p>
-        <a href="#" target="_blank" class="certification-link">Verify Certificate</a>
+        <div class="certificate-media" data-src="image/Bootstrap .jpg.jpeg" data-type="image"></div>
+        <h3>Bootstrap</h3>
+        <p class="certification-issuer">Various</p>
+        <p class="certification-date">2024</p>
+        <a href="image/Bootstrap .jpg.jpeg" target="_blank" class="certification-link">View Certificate</a>
       </div>
 
       <div class="certification-card">
-        <img src="images/cert-css-grid-flexbox.png" alt="CSS Grid and Flexbox Certificate" class="certificate-image" loading="lazy">
-        <h3>CSS Grid and Flexbox for Responsive Web Design</h3>
-        <p class="certification-issuer">LinkedIn Learning</p>
-        <p class="certification-date">May 2024</p>
-        <a href="#" target="_blank" class="certification-link">Verify Certificate</a>
+        <div class="certificate-media" data-src="image/Business Email.pdf" data-type="pdf"></div>
+        <h3>Business Email</h3>
+        <p class="certification-issuer">Various</p>
+        <p class="certification-date">2024</p>
+        <a href="image/Business Email.pdf" target="_blank" class="certification-link">View Certificate</a>
       </div>
 
       <div class="certification-card">
-        <img src="images/cert-web-performance.png" alt="Web Performance Optimization Certificate" class="certificate-image" loading="lazy">
-        <h3>Web Performance Optimization</h3>
-        <p class="certification-issuer">Google</p>
-        <p class="certification-date">June 2024</p>
-        <a href="#" target="_blank" class="certification-link">Verify Certificate</a>
+        <div class="certificate-media" data-src="image/Certificate_2321513_932_366np.pdf" data-type="pdf"></div>
+        <h3>Certificate 2321513</h3>
+        <p class="certification-issuer">Various</p>
+        <p class="certification-date">2024</p>
+        <a href="image/Certificate_2321513_932_366np.pdf" target="_blank" class="certification-link">View Certificate</a>
+      </div>
+
+      <div class="certification-card">
+        <div class="certificate-media" data-src="image/Critical Thinking in the AI Era.pdf" data-type="pdf"></div>
+        <h3>Critical Thinking in the AI Era</h3>
+        <p class="certification-issuer">Various</p>
+        <p class="certification-date">2024</p>
+        <a href="image/Critical Thinking in the AI Era.pdf" target="_blank" class="certification-link">View Certificate</a>
+      </div>
+
+      <div class="certification-card">
+        <div class="certificate-media" data-src="image/Customer Experience (CX) for Business Success.pdf" data-type="pdf"></div>
+        <h3>Customer Experience (CX) for Business Success</h3>
+        <p class="certification-issuer">Various</p>
+        <p class="certification-date">2024</p>
+        <a href="image/Customer Experience (CX) for Business Success.pdf" target="_blank" class="certification-link">View Certificate</a>
+      </div>
+
+      <div class="certification-card">
+        <div class="certificate-media" data-src="image/Data Science & Analytics.pdf" data-type="pdf"></div>
+        <h3>Data Science & Analytics</h3>
+        <p class="certification-issuer">Various</p>
+        <p class="certification-date">2024</p>
+        <a href="image/Data Science & Analytics.pdf" target="_blank" class="certification-link">View Certificate</a>
+      </div>
+
+      <div class="certification-card">
+        <div class="certificate-media" data-src="image/Effective Leadership.pdf" data-type="pdf"></div>
+        <h3>Effective Leadership</h3>
+        <p class="certification-issuer">Various</p>
+        <p class="certification-date">2024</p>
+        <a href="image/Effective Leadership.pdf" target="_blank" class="certification-link">View Certificate</a>
+      </div>
+
+      <div class="certification-card">
+        <div class="certificate-media" data-src="image/Email marketing certificate .jpg.jpeg" data-type="image"></div>
+        <h3>Email marketing certificate</h3>
+        <p class="certification-issuer">Various</p>
+        <p class="certification-date">2024</p>
+        <a href="image/Email marketing certificate .jpg.jpeg" target="_blank" class="certification-link">View Certificate</a>
+      </div>
+
+      <div class="certification-card">
+        <div class="certificate-media" data-src="image/Introduction to Cybersecurity Awareness.pdf" data-type="pdf"></div>
+        <h3>Introduction to Cybersecurity Awareness</h3>
+        <p class="certification-issuer">Various</p>
+        <p class="certification-date">2024</p>
+        <a href="image/Introduction to Cybersecurity Awareness.pdf" target="_blank" class="certification-link">View Certificate</a>
+      </div>
+
+      <div class="certification-card">
+        <div class="certificate-media" data-src="image/Introduction to Digital Business Skills.pdf" data-type="pdf"></div>
+        <h3>Introduction to Digital Business Skills</h3>
+        <p class="certification-issuer">Various</p>
+        <p class="certification-date">2024</p>
+        <a href="image/Introduction to Digital Business Skills.pdf" target="_blank" class="certification-link">View Certificate</a>
+      </div>
+
+      <div class="certification-card">
+        <div class="certificate-media" data-src="image/Issa Hussein Kehinde.pdf" data-type="pdf"></div>
+        <h3>Issa Hussein Kehinde</h3>
+        <p class="certification-issuer">Various</p>
+        <p class="certification-date">2024</p>
+        <a href="image/Issa Hussein Kehinde.pdf" target="_blank" class="certification-link">View Certificate</a>
+      </div>
+
+      <div class="certification-card">
+        <div class="certificate-media" data-src="image/Linux beginners .JPG.jpeg" data-type="image"></div>
+        <h3>Linux beginners</h3>
+        <p class="certification-issuer">Various</p>
+        <p class="certification-date">2024</p>
+        <a href="image/Linux beginners .JPG.jpeg" target="_blank" class="certification-link">View Certificate</a>
+      </div>
+
+      <div class="certification-card">
+        <div class="certificate-media" data-src="image/Master class .pdf" data-type="pdf"></div>
+        <h3>Master class</h3>
+        <p class="certification-issuer">Various</p>
+        <p class="certification-date">2024</p>
+        <a href="image/Master class .pdf" target="_blank" class="certification-link">View Certificate</a>
+      </div>
+
+      <div class="certification-card">
+        <div class="certificate-media" data-src="image/Professional Networking for Career Growth.pdf" data-type="pdf"></div>
+        <h3>Professional Networking for Career Growth</h3>
+        <p class="certification-issuer">Various</p>
+        <p class="certification-date">2024</p>
+        <a href="image/Professional Networking for Career Growth.pdf" target="_blank" class="certification-link">View Certificate</a>
+      </div>
+
+      <div class="certification-card">
+        <div class="certificate-media" data-src="image/Resume Writing and Job Interviewing.pdf" data-type="pdf"></div>
+        <h3>Resume Writing and Job Interviewing</h3>
+        <p class="certification-issuer">Various</p>
+        <p class="certification-date">2024</p>
+        <a href="image/Resume Writing and Job Interviewing.pdf" target="_blank" class="certification-link">View Certificate</a>
+      </div>
+
+      <div class="certification-card">
+        <div class="certificate-media" data-src="image/transcript .pdf" data-type="pdf"></div>
+        <h3>Transcript</h3>
+        <p class="certification-issuer">Various</p>
+        <p class="certification-date">2024</p>
+        <a href="image/transcript .pdf" target="_blank" class="certification-link">View Certificate</a>
+      </div>
+
+      <div class="certification-card">
+        <div class="certificate-media" data-src="image/UC-2cd1cf51-c324-4181-95fb-2a51aabcb42d.pdf" data-type="pdf"></div>
+        <h3>UC Certificate 1</h3>
+        <p class="certification-issuer">Various</p>
+        <p class="certification-date">2024</p>
+        <a href="image/UC-2cd1cf51-c324-4181-95fb-2a51aabcb42d.pdf" target="_blank" class="certification-link">View Certificate</a>
+      </div>
+
+      <div class="certification-card">
+        <div class="certificate-media" data-src="image/UC-874eac24-6fb3-4867-b330-46a397442558 2.pdf" data-type="pdf"></div>
+        <h3>UC Certificate 2</h3>
+        <p class="certification-issuer">Various</p>
+        <p class="certification-date">2024</p>
+        <a href="image/UC-874eac24-6fb3-4867-b330-46a397442558 2.pdf" target="_blank" class="certification-link">View Certificate</a>
+      </div>
+
+      <div class="certification-card">
+        <div class="certificate-media" data-src="image/UC-e29e4d04-228e-4865-bbd6-9d4a6505955a.pdf" data-type="pdf"></div>
+        <h3>UC Certificate 3</h3>
+        <p class="certification-issuer">Various</p>
+        <p class="certification-date">2024</p>
+        <a href="image/UC-e29e4d04-228e-4865-bbd6-9d4a6505955a.pdf" target="_blank" class="certification-link">View Certificate</a>
       </div>
     </div>
   </section>

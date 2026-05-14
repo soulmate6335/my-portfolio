@@ -124,3 +124,77 @@ document.querySelectorAll('.blog-card, .project-card').forEach(el => {
   el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
   observer.observe(el);
 });
+
+// Editable Profile Name
+const profileName = document.getElementById('profile-name');
+profileName.addEventListener('dblclick', function() {
+  const currentName = this.textContent;
+  const input = document.createElement('input');
+  input.type = 'text';
+  input.value = currentName;
+  input.className = 'name-input';
+  
+  this.replaceWith(input);
+  input.focus();
+  input.select();
+  
+  input.addEventListener('blur', function() {
+    const newName = this.value.trim() || 'Your Name';
+    const h3 = document.createElement('h3');
+    h3.id = 'profile-name';
+    h3.textContent = newName;
+    this.replaceWith(h3);
+    // Re-add the event listener
+    h3.addEventListener('dblclick', arguments.callee);
+  });
+  
+  input.addEventListener('keypress', function(e) {
+    if (e.key === 'Enter') {
+      this.blur();
+    }
+  });
+});
+
+// Profile Photo Upload
+document.getElementById('photo-upload').addEventListener('change', function(e) {
+  const file = e.target.files[0];
+  if (file) {
+    const reader = new FileReader();
+    reader.onload = function(e) {
+      document.getElementById('profile-photo').src = e.target.result;
+    };
+    reader.readAsDataURL(file);
+  }
+});
+
+// Initialize Certificate Media
+function initializeCertificateMedia() {
+  const mediaElements = document.querySelectorAll('.certificate-media');
+  
+  mediaElements.forEach(element => {
+    const src = element.getAttribute('data-src');
+    const type = element.getAttribute('data-type') || 'image';
+    
+    if (type === 'pdf' || src.toLowerCase().endsWith('.pdf')) {
+      // Create iframe for PDF
+      const iframe = document.createElement('iframe');
+      iframe.src = src;
+      iframe.className = 'certificate-pdf';
+      iframe.width = '100%';
+      iframe.height = '300px';
+      iframe.style.border = 'none';
+      element.appendChild(iframe);
+    } else {
+      // Create img for image
+      const img = document.createElement('img');
+      img.src = src;
+      img.alt = 'Certificate Image';
+      img.className = 'certificate-image';
+      img.loading = 'lazy';
+      element.appendChild(img);
+    }
+  });
+}
+
+// Call on page load
+window.addEventListener('load', initializeCertificateMedia);
